@@ -4,176 +4,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name=”theme-color” content=”#09f”>
-    <meta rel="icon" type="image/jpeg" href="./4cuatri_main.png">
+    <meta name="theme-color" content="#09f">
+    <link rel="icon" type="image/jpeg" href="./4cuatri_main.png">
+    <link rel="stylesheet" href="style.css">
     <title>Portfolio MK</title>
-
-    <style>
-        body {
-            background: rgba(228, 196, 255, 0.9);
-        }
-    </style>
-
-
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <ul>
+    <header class="header">
+        <nav class="navbar">
+            <!-- Logo or Brand Name -->
+            <a href="#" class="logo">Mykhailo</a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
                 <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="https://twitch.tv/midudev" target="_blank" rel="noreferrer">Twitch</a></li>
             </ul>
+
+            <a href="#contact" class="contact-btn">Contact</a>
+
+            <!-- Mobile Menu Icon -->
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="menu-icon"></span>
+            </button>
         </nav>
     </header>
 
-    <h1>Portfolio de Mykhailo</h1>
-    <p><strong>Ingeniero de Software</strong> con 4 años de experiencia</p>
-    <h2 id="experiencia">Experiencia</h2>
-    <ul>
-        <li class="">C#</li>
-        <li class="">.NET</li>
-    </ul>
+    <main class="content">
+        <h1>Portfolio de Mykhailo</h1>
+        <p class="intro"><strong>Ingeniero de Software</strong> con 4 años de experiencia</p>
 
-    <img title="My photo" src="./Myphoto.jpg" alt="My photo" width="500px" height="500px">
+        <section id="experiencia" class="experience-section">
+            <h2>Experiencia</h2>
+            <ul class="experience-list">
+                <li>C#</li>
+                <li>.NET</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>SQL</li>
+            </ul>
+        </section>
 
-    <aside>
-        <header>
-            <h3>Mis tecnologías favoritas</h3>
-        </header>
-        <ol>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>NodeJS</li>
-            <li>React</li>
-            <li>Angular</li>
-            <li>MySQL</li>
-            <li>RabbitMQ</li>
-        </ol>
-    </aside>
+        <section class="photo-section">
+            <img class="profile-photo" title="My photo" src="./Myphoto.jpg" alt="My photo" width="500px" height="500px">
+        </section>
 
-    <h2 id="proyectos">Proyectos realizados</h2>
-
-    <section>
-        <article>
-            <header>
-                <h4>Sitio Web Corporativo</h4>
-            </header>
-            <p>Desarrollo de un sitio Web corporativo con una interfaz amigable y
-                moderna</p>
-            <footer>
-                <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
-            </footer>
-        </article>
-    </section>
-
-    <section>
-        <article>
-            <header>
-                <h4>Aplicación e-commerce</h4>
-            </header>
-            <p> Desarrollo de una aplicación Web para una
-                tienda.</p>
-            <footer>
-                <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
-            </footer>
-        </article>
-    </section>
-
-    <section>
-        <article>
-            <header>
-                <h4>Aplicación móvil</h4>
-            </header>
-            <p>Desarrollo de una aplicación móvil para gimnasios.</p>
-            <footer>
-                <small>Tecnologías utilizadas: Kotlin, Android Studio</small>
-            </footer>
-        </article>
-    </section>
-
-
-    <section>
-        <h2>Formulario de contacto</h2>
-        <form method="post" action="/">
-            <fieldset>
-                <legend>Información personal</legend>
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" placeholder="MK">
-                <label for="em">email:</label>
-                <input type="email" id="em" placeholder="email@a.es">
-            </fieldset>
-            <fieldset>
-                <div>
-                    <datalist id="lang">
-                        <option value="JavaScript"></option>
-                        <option value="Python"></option>
-                        <option value="C++"></option>
-                    </datalist>
-                    <label>Que lenguaje necesitas ayuda?</label>
-                    <input list="lang" name="lang">
+        <section class="tech-favorites">
+            <h2 class="tech-favorites-title">Mis Tecnologías Favoritas</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="./html5.png" alt="HTML" class="tech-image">
+                    <div class="tech-overlay">
+                        <p class="tech-label">HTML</p>
+                    </div>
                 </div>
-            </fieldset>
-            <fieldset>
-                <legend>Otros</legend>
-                <div>
-                    <label for="why">¿Sobre qué quieres contactar?:</label>
-                    <select name="why" id="why">
-                        <option value="1">Trabajo</option>
-                        <option value="2">Consulta</option>
-                        <option value="3">Otros</option>
-                    </select>
+                <div class="tech-item">
+                    <img src="./css3.png" alt="CSS" class="tech-image">
+                    <div class="tech-overlay">
+                        <p class="tech-label">CSS</p>
+                    </div>
                 </div>
-                <div>
-                    <label for="terms">Acepta los términos</label>
-                    <input type="checkbox" id="terms" name="terms" required>
+                <div class="tech-item">
+                    <img src="./JS_logo.png" alt="JavaScript" class="tech-image">
+                    <div class="tech-overlay">
+                        <p class="tech-label">JavaScript</p>
+                    </div>
                 </div>
-            </fieldset>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+                <div class="tech-item">
+                    <img src="./NodeJS.png" alt="NodeJS" class="tech-image">
+                    <div class="tech-overlay">
+                        <p class="tech-label">NodeJS</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <img src="./React_logo.png" alt="React" class="tech-image">
+                    <div class="tech-overlay">
+                        <p class="tech-label">React</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <img src="./Angular_logo.png" alt="Angular" class="tech-image">
+                    <div class="tech-overlay">
+                        <p class="tech-label">Angular</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <img src="./MySQL-logo.jpg" alt="MySQL" class="tech-image">
+                    <div class="tech-overlay">
+                        <p class="tech-label">MySQL</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <img src="./rabbitmq.png" alt="rabbitmq" class="tech-image">
+                    <div class="tech-overlay">
+                        <p class="tech-label">rabbitmq</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects-section">
+            <h2>Proyectos realizados</h2>
+            <div class="projects-grid">
+                <article class="project-item">
+                    <img src="./site-1.webp" alt="Sitio Web Corporativo" class="project-image">
+                    <header class="project-header">
+                        <h4 class="project-title">Sitio Web Corporativo</h4>
+                    </header>
+                    <p class="project-description">Desarrollo de un sitio Web corporativo con una interfaz amigable y
+                        moderna.
+                    </p>
+                    <footer class="project-footer">
+                        <small class="project-technologies">Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+                    </footer>
+                </article>
+                <article class="project-item">
+                    <img src="./site-2.webp" alt="Aplicación e-commerce" class="project-image">
+                    <header class="project-header">
+                        <h4 class="project-title">Aplicación e-commerce</h4>
+                    </header>
+                    <p class="project-description">Desarrollo de una aplicación Web para una tienda.</p>
+                    <footer class="project-footer">
+                        <small class="project-technologies">Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+                    </footer>
+                </article>
+                <article class="project-item">
+                    <img src="./app3.jpeg" alt="Aplicación móvil para gimnasios" class="project-image">
+                    <header class="project-header">
+                        <h4 class="project-title">Aplicación móvil</h4>
+                    </header>
+                    <p class="project-description">Desarrollo de una aplicación móvil para gimnasios.</p>
+                    <footer class="project-footer">
+                        <small class="project-technologies">Tecnologías utilizadas: Kotlin, Android Studio</small>
+                    </footer>
+                </article>
+            </div>
+        </section>
 
 
+        <section id="contact" class="contact-section">
+            <h2>Formulario de contacto</h2>
+            <form method="post" action="/" class="contact-form">
+                <fieldset class="form-fieldset">
+                    <legend>Información personal</legend>
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" placeholder="MK" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="em">Email:</label>
+                        <input type="email" id="em" placeholder="email@a.es" class="form-input">
+                    </div>
+                </fieldset>
+                <fieldset class="form-fieldset">
+                    <legend>Preferencias</legend>
+                    <div class="form-group">
+                        <label>¿Qué lenguaje necesitas ayuda?</label>
+                        <input list="lang" name="lang" class="form-input">
+                        <datalist id="lang">
+                            <option value="JavaScript"></option>
+                            <option value="Python"></option>
+                            <option value="C++"></option>
+                        </datalist>
+                    </div>
+                </fieldset>
+                <fieldset class="form-fieldset">
+                    <legend>Otros</legend>
+                    <div class="form-group">
+                        <label for="why">¿Sobre qué quieres contactar?</label>
+                        <select name="why" id="why" class="form-select">
+                            <option value="1">Trabajo</option>
+                            <option value="2">Consulta</option>
+                            <option value="3">Otros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="terms" class="form-checkbox-label">
+                            <input type="checkbox" id="terms" name="terms" required class="form-checkbox">
+                            Acepta los términos
+                        </label>
+                    </div>
+                </fieldset>
+                <button type="submit" class="submit-button">Enviar</button>
+            </form>
+        </section>
 
 
-
-    <section>
-        <h2>Preguntas frecuentes</h2>
-        <details>
-            <summary>¿Cómo contacto?</summary>
-            <p>Enviando un correo a mykhailo.korobka@alu.uclm.es</p>
-        </details>
-        <details>
-            <summary>¿Cómo me llamo?</summary>
-            <p>Mykhailo Korobka</p>
-        </details>
-    </section>
-
-    <dialog id="modal">
-        <h1>Se puede abrir un modal</h1>
-        <p>Es totalmente nativo</p>
-        <button id="cerrar">Cerrar</button>
-    </dialog>
-    <button id="show">Ver más información</button>
-    <br />
+        <section class="faq-section">
+            <h2 class="faq-title">Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <details>
+                    <summary class="faq-question">¿Cómo contacto?</summary>
+                    <p class="faq-answer">Enviando un correo a mykhailo.korobka@alu.uclm.es</p>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary class="faq-question">¿Cómo me llamo?</summary>
+                    <p class="faq-answer">Mykhailo Korobka</p>
+                </details>
+            </div>
+        </section>
 
 
-    <video src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_
-    audio.mp4" controls muted poster="./free-html-resumes-june-2014-resume21.png" width="720px"></video>
+        <dialog id="modal" class="modal">
+            <h1 class="modal-title">Se puede abrir un modal</h1>
+            <p>Es totalmente nativo</p>
+            <button id="cerrar" class="modal-close">Cerrar</button>
+        </dialog>
 
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/FHb9JobDs2o"
-        title="HTML CSS Resume | Beginner Project" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button id="show" class="modal-show">Ver más información</button>
+
+        <video class="video" src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4"
+            controls muted poster="./free-html-resumes-june-2014-resume21.png" width="720px"></video>
+
+        <iframe class="iframe-video" width="720" height="560" src="https://www.youtube.com/embed/FHb9JobDs2o"
+            title="HTML CSS Resume | Beginner Project" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </main>
 
     <script>
         const modal = document.getElementById('modal');
         const showButton = document.getElementById('show');
         const closeButton = document.getElementById('cerrar');
 
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbar = document.querySelector('.navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
         showButton.addEventListener('click', () => {
             modal.showModal();
         });
@@ -182,7 +246,6 @@
             modal.close();
         });
     </script>
-
 
 </body>
 
